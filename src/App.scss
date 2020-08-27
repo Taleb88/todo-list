@@ -1,0 +1,111 @@
+@import './partials/allUtils';
+
+html {
+    background-color: $marine;    
+    margin-top: -2rem;
+
+    p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.1rem;
+    }
+
+    h5 {
+        text-align: center;
+        font-size: 1.1rem;
+
+        span {
+            color: $white;
+        }
+    }
+    
+    .app {
+        padding: 2rem;
+        height: 100vh;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            padding: 0 auto;
+            
+            @include mobile {
+                width: 20vw;
+            }
+
+            @include tablet {
+                width: 15vw;
+            }
+
+            @include desktop {
+                width: 8vw;
+            }
+        }
+
+        &__todolist {
+            background-color: $white;
+            border-radius: 0.25rem;
+            padding: 1.0rem;
+            max-width: 28.125rem;
+            font-style: italic;
+
+            @include tablet {
+                margin-left: 16%;
+            }
+
+            @include desktop {
+                margin-left: 29.5%;
+            }
+
+            &-todo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $cream;
+                box-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.35);
+                padding: 0.20rem 0.75rem;
+                font-size: 1rem; 
+                font-weight: bold;
+                margin-bottom: 0.40rem;
+                border-radius: 0.20rem;
+
+                button {
+                    background-color: $lavender;
+                    border-radius: 0.20rem;
+                    border: 0.15rem solid black;
+                    font-weight: bold;
+
+                    @include mobile {
+                        display: flex;
+                        justify-content: flex-end;;
+                    }
+                }
+
+                button:hover {
+                    background-color: $button-on-hover;
+                }
+            }
+
+            &-input {
+                background-color: $cream;
+                border: 0.15rem solid black;
+                border-radius: 0.25rem;
+                padding: 0.50rem;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1rem;
+
+                @include mobile {
+                    width: 91.8%;
+                }
+
+                @include tablet {
+                    width: 96%;
+                }
+            }
+
+            &-input:hover {
+                border: 0.15rem solid $marine;
+            }
+        }
+    }
+}
